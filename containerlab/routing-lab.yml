@@ -1,0 +1,23 @@
+name: routing-lab
+
+topology:
+  defaults:
+    kind: linux
+    image: clab-ubuntu-softnet:latest
+    binds:
+      - bin/entrypoint.sh:/entrypoint.sh
+
+  nodes:
+    hs1:
+      exec:
+        - bash /entrypoint.sh
+    rt1:
+      exec:
+        - bash /entrypoint.sh
+    hs2:
+      exec:
+        - bash /entrypoint.sh
+
+  links:
+    - endpoints: ["hs1:eth1", "rt1:eth1"]
+    - endpoints: ["hs2:eth1", "rt1:eth2"]
