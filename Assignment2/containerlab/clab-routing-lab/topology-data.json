@@ -1,0 +1,148 @@
+{
+  "name": "routing-lab",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-63908fa4d8a3",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKMO92gI5DLr8UJVao9Sn6niQR0wXulMJw+qQooL+K30"],
+  "nodes": {
+    "hs1": {
+      "index": "0",
+      "shortname": "hs1",
+      "longname": "clab-routing-lab-hs1",
+      "fqdn": "hs1.routing-lab.io",
+      "group": "",
+      "labdir": "/home/puami/lab/containerlab/clab-routing-lab/hs1",
+      "kind": "linux",
+      "image": "clab-ubuntu-softnet:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-63908fa4d8a3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/puami/lab/containerlab/clab-routing-lab/hs1",
+        "clab-node-longname": "clab-routing-lab-hs1",
+        "clab-node-name": "hs1",
+        "clab-node-type": "",
+        "clab-owner": "puami",
+        "clab-topo-file": "/home/puami/lab/containerlab/routing-lab.yml",
+        "containerlab": "routing-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "hs2": {
+      "index": "1",
+      "shortname": "hs2",
+      "longname": "clab-routing-lab-hs2",
+      "fqdn": "hs2.routing-lab.io",
+      "group": "",
+      "labdir": "/home/puami/lab/containerlab/clab-routing-lab/hs2",
+      "kind": "linux",
+      "image": "clab-ubuntu-softnet:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-63908fa4d8a3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/puami/lab/containerlab/clab-routing-lab/hs2",
+        "clab-node-longname": "clab-routing-lab-hs2",
+        "clab-node-name": "hs2",
+        "clab-node-type": "",
+        "clab-owner": "puami",
+        "clab-topo-file": "/home/puami/lab/containerlab/routing-lab.yml",
+        "containerlab": "routing-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rt1": {
+      "index": "2",
+      "shortname": "rt1",
+      "longname": "clab-routing-lab-rt1",
+      "fqdn": "rt1.routing-lab.io",
+      "group": "",
+      "labdir": "/home/puami/lab/containerlab/clab-routing-lab/rt1",
+      "kind": "linux",
+      "image": "clab-ubuntu-softnet:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-63908fa4d8a3",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/puami/lab/containerlab/clab-routing-lab/rt1",
+        "clab-node-longname": "clab-routing-lab-rt1",
+        "clab-node-name": "rt1",
+        "clab-node-type": "",
+        "clab-owner": "puami",
+        "clab-topo-file": "/home/puami/lab/containerlab/routing-lab.yml",
+        "containerlab": "routing-lab"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "hs1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:81:22:90",
+          "peer": "z"
+        },
+        "z": {
+          "node": "rt1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:1d:b2:3b",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "hs2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:71:fd:53",
+          "peer": "z"
+        },
+        "z": {
+          "node": "rt1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:e1:a9:82",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
