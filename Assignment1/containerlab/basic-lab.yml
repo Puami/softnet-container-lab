@@ -1,0 +1,19 @@
+name: basic-lab
+
+topology:
+  defaults:
+    kind: linux
+    image: clab-ubuntu-softnet:latest
+    binds:
+      - bin/entrypoint.sh:/entrypoint.sh
+
+  nodes:
+    node1:
+      exec:
+        - bash /entrypoint.sh
+    node2:
+      exec:
+        - bash /entrypoint.sh
+
+  links:
+    - endpoints: ["node1:eth1", "node2:eth1"]
