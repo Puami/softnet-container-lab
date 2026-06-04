@@ -21,11 +21,14 @@ The lab consists of three nodes:
    sudo clab deploy -t containerlab/routing-lab.yml
    
 2. **Verify IPv4 connectivity (Ping from hs1 to hs2):**
+   ```bash
    docker exec clab-routing-lab-hs1 ping -c 3 10.0.2.2
 
 3. **Verify IPv6 connectivity (Ping from hs1 to hs2):**
+   ```bash
    docker exec clab-routing-lab-hs1 ping -6 -c 3 fc00:2::2
 
 4. **Destroy the lab and clean up resources:**   
+   ```bash
    sudo clab destroy -t containerlab/routing-lab.yml
       
