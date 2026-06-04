@@ -23,7 +23,7 @@
       "longname": "clab-routing-lab-hs1",
       "fqdn": "hs1.routing-lab.io",
       "group": "",
-      "labdir": "/home/puami/lab/containerlab/clab-routing-lab/hs1",
+      "labdir": "/home/puami/lab/Assignment2/containerlab/clab-routing-lab/hs1",
       "kind": "linux",
       "image": "clab-ubuntu-softnet:latest",
       "mgmt-net": "",
@@ -37,12 +37,12 @@
         "clab-mgmt-net-bridge": "br-63908fa4d8a3",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/home/puami/lab/containerlab/clab-routing-lab/hs1",
+        "clab-node-lab-dir": "/home/puami/lab/Assignment2/containerlab/clab-routing-lab/hs1",
         "clab-node-longname": "clab-routing-lab-hs1",
         "clab-node-name": "hs1",
         "clab-node-type": "",
         "clab-owner": "puami",
-        "clab-topo-file": "/home/puami/lab/containerlab/routing-lab.yml",
+        "clab-topo-file": "/home/puami/lab/Assignment2/containerlab/routing-lab.yml",
         "containerlab": "routing-lab"
       },
       "port-bindings": [
@@ -54,7 +54,7 @@
       "longname": "clab-routing-lab-hs2",
       "fqdn": "hs2.routing-lab.io",
       "group": "",
-      "labdir": "/home/puami/lab/containerlab/clab-routing-lab/hs2",
+      "labdir": "/home/puami/lab/Assignment2/containerlab/clab-routing-lab/hs2",
       "kind": "linux",
       "image": "clab-ubuntu-softnet:latest",
       "mgmt-net": "",
@@ -68,12 +68,12 @@
         "clab-mgmt-net-bridge": "br-63908fa4d8a3",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/home/puami/lab/containerlab/clab-routing-lab/hs2",
+        "clab-node-lab-dir": "/home/puami/lab/Assignment2/containerlab/clab-routing-lab/hs2",
         "clab-node-longname": "clab-routing-lab-hs2",
         "clab-node-name": "hs2",
         "clab-node-type": "",
         "clab-owner": "puami",
-        "clab-topo-file": "/home/puami/lab/containerlab/routing-lab.yml",
+        "clab-topo-file": "/home/puami/lab/Assignment2/containerlab/routing-lab.yml",
         "containerlab": "routing-lab"
       },
       "port-bindings": [
@@ -85,7 +85,7 @@
       "longname": "clab-routing-lab-rt1",
       "fqdn": "rt1.routing-lab.io",
       "group": "",
-      "labdir": "/home/puami/lab/containerlab/clab-routing-lab/rt1",
+      "labdir": "/home/puami/lab/Assignment2/containerlab/clab-routing-lab/rt1",
       "kind": "linux",
       "image": "clab-ubuntu-softnet:latest",
       "mgmt-net": "",
@@ -99,12 +99,12 @@
         "clab-mgmt-net-bridge": "br-63908fa4d8a3",
         "clab-node-group": "",
         "clab-node-kind": "linux",
-        "clab-node-lab-dir": "/home/puami/lab/containerlab/clab-routing-lab/rt1",
+        "clab-node-lab-dir": "/home/puami/lab/Assignment2/containerlab/clab-routing-lab/rt1",
         "clab-node-longname": "clab-routing-lab-rt1",
         "clab-node-name": "rt1",
         "clab-node-type": "",
         "clab-owner": "puami",
-        "clab-topo-file": "/home/puami/lab/containerlab/routing-lab.yml",
+        "clab-topo-file": "/home/puami/lab/Assignment2/containerlab/routing-lab.yml",
         "containerlab": "routing-lab"
       },
       "port-bindings": [
@@ -117,13 +117,13 @@
         "a": {
           "node": "hs1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:81:22:90",
+          "mac": "aa:c1:ab:29:f6:cb",
           "peer": "z"
         },
         "z": {
           "node": "rt1",
           "interface": "eth1",
-          "mac": "aa:c1:ab:1d:b2:3b",
+          "mac": "aa:c1:ab:03:98:91",
           "peer": "a"
         }
       }
@@ -133,13 +133,13 @@
         "a": {
           "node": "hs2",
           "interface": "eth1",
-          "mac": "aa:c1:ab:71:fd:53",
+          "mac": "aa:c1:ab:b2:4b:13",
           "peer": "z"
         },
         "z": {
           "node": "rt1",
           "interface": "eth2",
-          "mac": "aa:c1:ab:e1:a9:82",
+          "mac": "aa:c1:ab:0d:94:1e",
           "peer": "a"
         }
       }
