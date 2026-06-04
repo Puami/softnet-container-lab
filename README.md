@@ -1,26 +1,13 @@
-# 🌐 Software Networks Assignments
+# 🎓 Software Defined Networking (SDN) Lab
 
-This repository contains my lab assignments for the Software Networks course, focusing on Containerlab and Linux networking.
+Welcome to the repository for my SDN and Containerlab assignments.
 
----
+## 📂 Assignments Directory
 
-## 📌 Section 1: Assignment SDN-04 (Bind-Mount)
-**Goal:** Modify a basic 2-node topology to use a bind-mounted `entrypoint.sh` instead of baking it into the Docker image via `COPY`.
-
-* **Topology File:** `containerlab/basic-lab.yml`
-* **Network Structure:** `node1 <---> node2`
-* **Status:** ✅ Completed (Successfully tested IPv4 & IPv6 connectivity)
+* **[Assignment 1 (SDN-04): Basic 2-Node Topology](./Assignment1)**
+    * Setting up a basic container network with static IPs via entrypoint scripts.
+* **[Assignment 2 (SDN-05): 3-Node Routing Lab](./Assignment2)**
+    * Configuring IPv4 and IPv6 routing between two distinct subnets using a central Linux router.
 
 ---
-
-## 📌 Section 2: Assignment SDN-05 (3-Node Router Topology)
-**Goal:** Build a 3-node topology representing two separate subnets connected by a router. The router must forward traffic between the subnets automatically.
-
-* **Topology File:** `containerlab/routing-lab.yml`
-* **Network Structure:** `hs1 <---> rt1 (Router) <---> hs2`
-* **Key Configurations:** * Enabled `net.ipv4.ip_forward` and IPv6 forwarding on the router.
-  * Configured static IP routing via `entrypoint.sh`.
-* **Status:** ✅ Completed (Achieved 0% packet loss between hs1 and hs2)
-
----
-*Developed for Rome Tor Vergata ICT Engineering program.*
+*University of Rome Tor Vergata - ICT and Internet Engineering*
